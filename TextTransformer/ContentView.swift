@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import TextTransformerKit
 
 struct ContentView: View {
     @StateObject var host = TextTransformExtensionHost()

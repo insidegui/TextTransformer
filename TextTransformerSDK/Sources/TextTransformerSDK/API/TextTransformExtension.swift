@@ -9,6 +9,9 @@ import Foundation
 import ExtensionFoundation
 
 /// Protocol implemented by text transform extensions.
+///
+/// You create a struct conforming to this protocol and implement the ``transform(_:)`` method
+/// in order to perform the custom text transformation that your extension provides to the app.
 public protocol TextTransformExtension: AppExtension {
     
     /// Transform the input string according to your extension's behavior
@@ -28,15 +31,5 @@ public struct TextTransformExtensionConfiguration<E: TextTransformExtension>: Ap
     public init(_ appExtension: E) {
         self.appExtension = appExtension
         self.server = TextTransformerExtensionXPCServer(with: appExtension)
-    }
-    
-    /// You don't call this method, it is implemented by TextTransformerKit and used internally by ExtensionKit.
-    public func accept(connection: NSXPCConnection) -> Bool {
-        connection.exportedInterface = NSXPCInterface(with: TextTransformerXPCProtocol.self)
-        connection.exportedObject = server
-        
-        connection.resume()
-        
-        return true
     }
 }

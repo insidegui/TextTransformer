@@ -8,6 +8,7 @@
 import Cocoa
 import ExtensionFoundation
 import ExtensionKit
+@_spi(TextTransformerXPC) import TextTransformerSDK
 
 public struct TextTransformExtensionInfo: Identifiable, Hashable {
     

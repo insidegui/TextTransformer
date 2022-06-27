@@ -1,32 +1,25 @@
 //
-//  TextTransformerXPCProtocol.swift
-//  TextTransformerKit
+//  TextTransformerExtensionXPCClient.swift
+//  TextTransformer
 //
 //  Created by Guilherme Rambo on 27/06/22.
 //
 
 import Foundation
 import ExtensionFoundation
-
-extension String: LocalizedError {
-    public var errorDescription: String? { self }
-}
-
-@objc protocol TextTransformerXPCProtocol: NSObjectProtocol {
-    func transform(input: String, reply: @escaping (String?) -> Void)
-}
+@_spi(TextTransformerXPC) import TextTransformerSDK
 
 final class TextTransformerExtensionXPCClient: NSObject {
     
     let process: AppExtensionProcess
     
-    init(with process: AppExtensionProcess) {
+    public init(with process: AppExtensionProcess) {
         self.process = process
     }
     
     private var currentConnection: NSXPCConnection?
     
-    func runOperation(with input: String) async throws -> String {
+    public func runOperation(with input: String) async throws -> String {
         var done = false
         
         let connection = try process.makeXPCConnection()
@@ -57,23 +50,6 @@ final class TextTransformerExtensionXPCClient: NSObject {
                     continuation.resume(throwing: "Extension returned nil response")
                 }
             }
-        }
-    }
-    
-}
-
-@objc final class TextTransformerExtensionXPCServer: NSObject, TextTransformerXPCProtocol {
-    
-    let implementation: any TextTransformExtension
-    
-    init(with implementation: some TextTransformExtension) {
-        self.implementation = implementation
-    }
-    
-    func transform(input: String, reply: @escaping (String?) -> Void) {
-        Task {
-            let result = await implementation.transform(input)
-            await MainActor.run { reply(result) }
         }
     }
     
