@@ -4,6 +4,8 @@ This year's WWDC introduced many new APIs, two of which caught my attention: Ext
 
 ![Screenshot of the TextTransformer sample app](./Images/Hero.png)
 
+_Huge thanks to [@mattmassicotte](https://github.com/mattmassicotte) for the help_
+
 We've been able to develop extensions for Apple's apps and operating systems for a while, but Apple never offered a native way for third-party apps to provide custom extension points that other apps can take advantage of.
 
 With ExtensionFoundation and ExtensionKit on macOS, now we can.
