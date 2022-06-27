@@ -1,0 +1,908 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F4228F762869EE2500C13F80 /* TextTransformerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4228F752869EE2500C13F80 /* TextTransformerApp.swift */; };
+		F4228F782869EE2500C13F80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4228F772869EE2500C13F80 /* ContentView.swift */; };
+		F4228F7A2869EE2500C13F80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4228F792869EE2500C13F80 /* Assets.xcassets */; };
+		F4228F7D2869EE2500C13F80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4228F7C2869EE2500C13F80 /* Preview Assets.xcassets */; };
+		F4228F8C2869F7BC00C13F80 /* TextTransformerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F4228F8B2869F7BC00C13F80 /* TextTransformerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4228F8F2869F7BC00C13F80 /* TextTransformerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4228F892869F7BC00C13F80 /* TextTransformerKit.framework */; };
+		F4228F902869F7BC00C13F80 /* TextTransformerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F4228F892869F7BC00C13F80 /* TextTransformerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F4228F982869F84900C13F80 /* codes.rambo.experiment.TextTransformer.extension.appextensionpoint in Resources */ = {isa = PBXBuildFile; fileRef = F4228F972869F84900C13F80 /* codes.rambo.experiment.TextTransformer.extension.appextensionpoint */; };
+		F4228F9A2869F89F00C13F80 /* codes.rambo.experiment.TextTransformer.extension.appextensionpoint in Embed Extension Points */ = {isa = PBXBuildFile; fileRef = F4228F972869F84900C13F80 /* codes.rambo.experiment.TextTransformer.extension.appextensionpoint */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F4228F9C2869F9B700C13F80 /* TextTransformExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4228F9B2869F9B700C13F80 /* TextTransformExtension.swift */; };
+		F4228FA42869FAE200C13F80 /* ExtensionProviderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4228FA32869FAE200C13F80 /* ExtensionProviderApp.swift */; };
+		F4228FA62869FAE200C13F80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4228FA52869FAE200C13F80 /* ContentView.swift */; };
+		F4228FA82869FAE300C13F80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4228FA72869FAE300C13F80 /* Assets.xcassets */; };
+		F4228FAB2869FAE300C13F80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4228FAA2869FAE300C13F80 /* Preview Assets.xcassets */; };
+		F4228FB72869FB0000C13F80 /* Uppercase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4228FB62869FB0000C13F80 /* Uppercase.swift */; };
+		F4228FBB2869FB0000C13F80 /* Uppercase.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = F4228FB42869FB0000C13F80 /* Uppercase.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F4228FC32869FB0B00C13F80 /* TextTransformerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4228F892869F7BC00C13F80 /* TextTransformerKit.framework */; };
+		F4228FC42869FB1400C13F80 /* TextTransformerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4228F892869F7BC00C13F80 /* TextTransformerKit.framework */; };
+		F4228FC52869FB1400C13F80 /* TextTransformerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F4228F892869F7BC00C13F80 /* TextTransformerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F4228FCA2869FC3100C13F80 /* TextTransformExtensionHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4228FC92869FC3100C13F80 /* TextTransformExtensionHost.swift */; };
+		F4228FCD286A092100C13F80 /* TextTransformerXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4228FCC286A092100C13F80 /* TextTransformerXPCProtocol.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4228F8D2869F7BC00C13F80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4228F6A2869EE2500C13F80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4228F882869F7BC00C13F80;
+			remoteInfo = TextTransformerKit;
+		};
+		F4228FB92869FB0000C13F80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4228F6A2869EE2500C13F80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4228FB32869FB0000C13F80;
+			remoteInfo = Uppercase;
+		};
+		F4228FC02869FB0700C13F80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4228F6A2869EE2500C13F80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4228F882869F7BC00C13F80;
+			remoteInfo = TextTransformerKit;
+		};
+		F4228FC62869FB1400C13F80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4228F6A2869EE2500C13F80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4228F882869F7BC00C13F80;
+			remoteInfo = TextTransformerKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F4228F942869F7BC00C13F80 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F4228F902869F7BC00C13F80 /* TextTransformerKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4228F992869F88F00C13F80 /* Embed Extension Points */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				F4228F9A2869F89F00C13F80 /* codes.rambo.experiment.TextTransformer.extension.appextensionpoint in Embed Extension Points */,
+			);
+			name = "Embed Extension Points";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4228FBF2869FB0000C13F80 /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				F4228FBB2869FB0000C13F80 /* Uppercase.appex in Embed ExtensionKit Extensions */,
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4228FC82869FB1400C13F80 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F4228FC52869FB1400C13F80 /* TextTransformerKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F4228F722869EE2500C13F80 /* TextTransformer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextTransformer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4228F752869EE2500C13F80 /* TextTransformerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTransformerApp.swift; sourceTree = "<group>"; };
+		F4228F772869EE2500C13F80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F4228F792869EE2500C13F80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4228F7C2869EE2500C13F80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F4228F7E2869EE2500C13F80 /* TextTransformer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TextTransformer.entitlements; sourceTree = "<group>"; };
+		F4228F892869F7BC00C13F80 /* TextTransformerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TextTransformerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4228F8B2869F7BC00C13F80 /* TextTransformerKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextTransformerKit.h; sourceTree = "<group>"; };
+		F4228F972869F84900C13F80 /* codes.rambo.experiment.TextTransformer.extension.appextensionpoint */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = codes.rambo.experiment.TextTransformer.extension.appextensionpoint; sourceTree = "<group>"; };
+		F4228F9B2869F9B700C13F80 /* TextTransformExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTransformExtension.swift; sourceTree = "<group>"; };
+		F4228FA12869FAE200C13F80 /* ExtensionProvider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtensionProvider.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4228FA32869FAE200C13F80 /* ExtensionProviderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionProviderApp.swift; sourceTree = "<group>"; };
+		F4228FA52869FAE200C13F80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F4228FA72869FAE300C13F80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4228FAA2869FAE300C13F80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F4228FAC2869FAE300C13F80 /* ExtensionProvider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExtensionProvider.entitlements; sourceTree = "<group>"; };
+		F4228FB42869FB0000C13F80 /* Uppercase.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = Uppercase.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4228FB62869FB0000C13F80 /* Uppercase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uppercase.swift; sourceTree = "<group>"; };
+		F4228FB82869FB0000C13F80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4228FC92869FC3100C13F80 /* TextTransformExtensionHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTransformExtensionHost.swift; sourceTree = "<group>"; };
+		F4228FCC286A092100C13F80 /* TextTransformerXPCProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTransformerXPCProtocol.swift; sourceTree = "<group>"; };
+		F4228FCE286A14F100C13F80 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4228F6F2869EE2500C13F80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4228F8F2869F7BC00C13F80 /* TextTransformerKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4228F862869F7BC00C13F80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4228F9E2869FAE200C13F80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4228FC42869FB1400C13F80 /* TextTransformerKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4228FB12869FB0000C13F80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4228FC32869FB0B00C13F80 /* TextTransformerKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4228F692869EE2500C13F80 = {
+			isa = PBXGroup;
+			children = (
+				F4228FCE286A14F100C13F80 /* README.md */,
+				F4228F742869EE2500C13F80 /* TextTransformer */,
+				F4228F8A2869F7BC00C13F80 /* TextTransformerKit */,
+				F4228FA22869FAE200C13F80 /* ExtensionProvider */,
+				F4228FB52869FB0000C13F80 /* Uppercase */,
+				F4228F732869EE2500C13F80 /* Products */,
+				F4228FC22869FB0B00C13F80 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F4228F732869EE2500C13F80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4228F722869EE2500C13F80 /* TextTransformer.app */,
+				F4228F892869F7BC00C13F80 /* TextTransformerKit.framework */,
+				F4228FA12869FAE200C13F80 /* ExtensionProvider.app */,
+				F4228FB42869FB0000C13F80 /* Uppercase.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4228F742869EE2500C13F80 /* TextTransformer */ = {
+			isa = PBXGroup;
+			children = (
+				F4228F752869EE2500C13F80 /* TextTransformerApp.swift */,
+				F4228F772869EE2500C13F80 /* ContentView.swift */,
+				F4228F792869EE2500C13F80 /* Assets.xcassets */,
+				F4228F7E2869EE2500C13F80 /* TextTransformer.entitlements */,
+				F4228F7B2869EE2500C13F80 /* Preview Content */,
+				F4228F972869F84900C13F80 /* codes.rambo.experiment.TextTransformer.extension.appextensionpoint */,
+			);
+			path = TextTransformer;
+			sourceTree = "<group>";
+		};
+		F4228F7B2869EE2500C13F80 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F4228F7C2869EE2500C13F80 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F4228F8A2869F7BC00C13F80 /* TextTransformerKit */ = {
+			isa = PBXGroup;
+			children = (
+				F4228F952869F7C000C13F80 /* Source */,
+				F4228F8B2869F7BC00C13F80 /* TextTransformerKit.h */,
+			);
+			path = TextTransformerKit;
+			sourceTree = "<group>";
+		};
+		F4228F952869F7C000C13F80 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F4228FCB286A091700C13F80 /* XPC */,
+				F4228F9B2869F9B700C13F80 /* TextTransformExtension.swift */,
+				F4228FC92869FC3100C13F80 /* TextTransformExtensionHost.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F4228FA22869FAE200C13F80 /* ExtensionProvider */ = {
+			isa = PBXGroup;
+			children = (
+				F4228FA32869FAE200C13F80 /* ExtensionProviderApp.swift */,
+				F4228FA52869FAE200C13F80 /* ContentView.swift */,
+				F4228FA72869FAE300C13F80 /* Assets.xcassets */,
+				F4228FAC2869FAE300C13F80 /* ExtensionProvider.entitlements */,
+				F4228FA92869FAE300C13F80 /* Preview Content */,
+			);
+			path = ExtensionProvider;
+			sourceTree = "<group>";
+		};
+		F4228FA92869FAE300C13F80 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F4228FAA2869FAE300C13F80 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F4228FB52869FB0000C13F80 /* Uppercase */ = {
+			isa = PBXGroup;
+			children = (
+				F4228FB62869FB0000C13F80 /* Uppercase.swift */,
+				F4228FB82869FB0000C13F80 /* Info.plist */,
+			);
+			path = Uppercase;
+			sourceTree = "<group>";
+		};
+		F4228FC22869FB0B00C13F80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4228FCB286A091700C13F80 /* XPC */ = {
+			isa = PBXGroup;
+			children = (
+				F4228FCC286A092100C13F80 /* TextTransformerXPCProtocol.swift */,
+			);
+			path = XPC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F4228F842869F7BC00C13F80 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4228F8C2869F7BC00C13F80 /* TextTransformerKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F4228F712869EE2500C13F80 /* TextTransformer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4228F812869EE2500C13F80 /* Build configuration list for PBXNativeTarget "TextTransformer" */;
+			buildPhases = (
+				F4228F6E2869EE2500C13F80 /* Sources */,
+				F4228F6F2869EE2500C13F80 /* Frameworks */,
+				F4228F702869EE2500C13F80 /* Resources */,
+				F4228F942869F7BC00C13F80 /* Embed Frameworks */,
+				F4228F992869F88F00C13F80 /* Embed Extension Points */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4228F8E2869F7BC00C13F80 /* PBXTargetDependency */,
+			);
+			name = TextTransformer;
+			productName = TextTransformer;
+			productReference = F4228F722869EE2500C13F80 /* TextTransformer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4228F882869F7BC00C13F80 /* TextTransformerKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4228F912869F7BC00C13F80 /* Build configuration list for PBXNativeTarget "TextTransformerKit" */;
+			buildPhases = (
+				F4228F842869F7BC00C13F80 /* Headers */,
+				F4228F852869F7BC00C13F80 /* Sources */,
+				F4228F862869F7BC00C13F80 /* Frameworks */,
+				F4228F872869F7BC00C13F80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TextTransformerKit;
+			productName = TextTransformerKit;
+			productReference = F4228F892869F7BC00C13F80 /* TextTransformerKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F4228FA02869FAE200C13F80 /* ExtensionProvider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4228FAD2869FAE300C13F80 /* Build configuration list for PBXNativeTarget "ExtensionProvider" */;
+			buildPhases = (
+				F4228F9D2869FAE200C13F80 /* Sources */,
+				F4228F9E2869FAE200C13F80 /* Frameworks */,
+				F4228F9F2869FAE200C13F80 /* Resources */,
+				F4228FBF2869FB0000C13F80 /* Embed ExtensionKit Extensions */,
+				F4228FC82869FB1400C13F80 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4228FBA2869FB0000C13F80 /* PBXTargetDependency */,
+				F4228FC72869FB1400C13F80 /* PBXTargetDependency */,
+			);
+			name = ExtensionProvider;
+			productName = ExtensionProvider;
+			productReference = F4228FA12869FAE200C13F80 /* ExtensionProvider.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4228FB32869FB0000C13F80 /* Uppercase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4228FBC2869FB0000C13F80 /* Build configuration list for PBXNativeTarget "Uppercase" */;
+			buildPhases = (
+				F4228FB02869FB0000C13F80 /* Sources */,
+				F4228FB12869FB0000C13F80 /* Frameworks */,
+				F4228FB22869FB0000C13F80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4228FC12869FB0700C13F80 /* PBXTargetDependency */,
+			);
+			name = Uppercase;
+			productName = Uppercase;
+			productReference = F4228FB42869FB0000C13F80 /* Uppercase.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4228F6A2869EE2500C13F80 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					F4228F712869EE2500C13F80 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					F4228F882869F7BC00C13F80 = {
+						CreatedOnToolsVersion = 14.0;
+						LastSwiftMigration = 1400;
+					};
+					F4228FA02869FAE200C13F80 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					F4228FB32869FB0000C13F80 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+				};
+			};
+			buildConfigurationList = F4228F6D2869EE2500C13F80 /* Build configuration list for PBXProject "TextTransformer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4228F692869EE2500C13F80;
+			productRefGroup = F4228F732869EE2500C13F80 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4228F712869EE2500C13F80 /* TextTransformer */,
+				F4228F882869F7BC00C13F80 /* TextTransformerKit */,
+				F4228FA02869FAE200C13F80 /* ExtensionProvider */,
+				F4228FB32869FB0000C13F80 /* Uppercase */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4228F702869EE2500C13F80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4228F982869F84900C13F80 /* codes.rambo.experiment.TextTransformer.extension.appextensionpoint in Resources */,
+				F4228F7D2869EE2500C13F80 /* Preview Assets.xcassets in Resources */,
+				F4228F7A2869EE2500C13F80 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4228F872869F7BC00C13F80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4228F9F2869FAE200C13F80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4228FAB2869FAE300C13F80 /* Preview Assets.xcassets in Resources */,
+				F4228FA82869FAE300C13F80 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4228FB22869FB0000C13F80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4228F6E2869EE2500C13F80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4228F782869EE2500C13F80 /* ContentView.swift in Sources */,
+				F4228F762869EE2500C13F80 /* TextTransformerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4228F852869F7BC00C13F80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4228FCD286A092100C13F80 /* TextTransformerXPCProtocol.swift in Sources */,
+				F4228F9C2869F9B700C13F80 /* TextTransformExtension.swift in Sources */,
+				F4228FCA2869FC3100C13F80 /* TextTransformExtensionHost.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4228F9D2869FAE200C13F80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4228FA62869FAE200C13F80 /* ContentView.swift in Sources */,
+				F4228FA42869FAE200C13F80 /* ExtensionProviderApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4228FB02869FB0000C13F80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4228FB72869FB0000C13F80 /* Uppercase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4228F8E2869F7BC00C13F80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4228F882869F7BC00C13F80 /* TextTransformerKit */;
+			targetProxy = F4228F8D2869F7BC00C13F80 /* PBXContainerItemProxy */;
+		};
+		F4228FBA2869FB0000C13F80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4228FB32869FB0000C13F80 /* Uppercase */;
+			targetProxy = F4228FB92869FB0000C13F80 /* PBXContainerItemProxy */;
+		};
+		F4228FC12869FB0700C13F80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4228F882869F7BC00C13F80 /* TextTransformerKit */;
+			targetProxy = F4228FC02869FB0700C13F80 /* PBXContainerItemProxy */;
+		};
+		F4228FC72869FB1400C13F80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4228F882869F7BC00C13F80 /* TextTransformerKit */;
+			targetProxy = F4228FC62869FB1400C13F80 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F4228F7F2869EE2500C13F80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F4228F802869EE2500C13F80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F4228F822869EE2500C13F80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TextTransformer/TextTransformer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TextTransformer/Preview Content\"";
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.rambo.experiment.TextTransformer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F4228F832869EE2500C13F80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TextTransformer/TextTransformer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TextTransformer/Preview Content\"";
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.rambo.experiment.TextTransformer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F4228F922869F7BC00C13F80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.rambo.experiment.TextTransformerKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F4228F932869F7BC00C13F80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.rambo.experiment.TextTransformerKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F4228FAE2869FAE300C13F80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ExtensionProvider/ExtensionProvider.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ExtensionProvider/Preview Content\"";
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.rambo.experiment.ExtensionProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F4228FAF2869FAE300C13F80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ExtensionProvider/ExtensionProvider.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ExtensionProvider/Preview Content\"";
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.rambo.experiment.ExtensionProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F4228FBD2869FB0000C13F80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Uppercase/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Uppercase;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.rambo.experiment.ExtensionProvider.Uppercase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F4228FBE2869FB0000C13F80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Uppercase/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Uppercase;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.rambo.experiment.ExtensionProvider.Uppercase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4228F6D2869EE2500C13F80 /* Build configuration list for PBXProject "TextTransformer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4228F7F2869EE2500C13F80 /* Debug */,
+				F4228F802869EE2500C13F80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4228F812869EE2500C13F80 /* Build configuration list for PBXNativeTarget "TextTransformer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4228F822869EE2500C13F80 /* Debug */,
+				F4228F832869EE2500C13F80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4228F912869F7BC00C13F80 /* Build configuration list for PBXNativeTarget "TextTransformerKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4228F922869F7BC00C13F80 /* Debug */,
+				F4228F932869F7BC00C13F80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4228FAD2869FAE300C13F80 /* Build configuration list for PBXNativeTarget "ExtensionProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4228FAE2869FAE300C13F80 /* Debug */,
+				F4228FAF2869FAE300C13F80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4228FBC2869FB0000C13F80 /* Build configuration list for PBXNativeTarget "Uppercase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4228FBD2869FB0000C13F80 /* Debug */,
+				F4228FBE2869FB0000C13F80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4228F6A2869EE2500C13F80 /* Project object */;
+}
