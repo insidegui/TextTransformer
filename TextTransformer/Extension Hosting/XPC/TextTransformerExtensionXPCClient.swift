@@ -24,6 +24,16 @@ final class TextTransformerExtensionXPCClient: NSObject {
         connection.remoteObjectInterface = NSXPCInterface(with: TextTransformerXPCProtocol.self)
         
         connection.resume()
+        
+        /*
+         Important note on bridging XPC callbacks and async/await:
+         
+         The reply block for an XPC method call may never be called in some circumstances,
+         such as when the remote process dies before calling it.
+         
+         You may want to use something like `withCancellingContinuation`:
+         https://github.com/ChimeHQ/ConcurrencyPlus
+         */
     
         return try await withCheckedThrowingContinuation { continuation in
             guard let service = connection.remoteObjectProxyWithErrorHandler({ error in
