@@ -103,6 +103,7 @@
 		F4228FD8286A1B2F00C13F80 /* TextTransformerExtensionXPCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTransformerExtensionXPCClient.swift; sourceTree = "<group>"; };
 		F4228FDD286A1F4F00C13F80 /* GenericExtension.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GenericExtension.png; sourceTree = "<group>"; };
 		F4228FDE286A218600C13F80 /* ManageExtensions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManageExtensions.png; sourceTree = "<group>"; };
+		F47EE333286A27D400132067 /* Hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hero.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +235,7 @@
 		F4228FDC286A1F1600C13F80 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F47EE333286A27D400132067 /* Hero.png */,
 				F4228FDD286A1F4F00C13F80 /* GenericExtension.png */,
 				F4228FDE286A218600C13F80 /* ManageExtensions.png */,
 			);
