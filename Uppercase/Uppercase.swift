@@ -11,7 +11,7 @@ import TextTransformerSDK
 
 /// Sample extension that transforms the input into its uppercase representation.
 @main
-class Uppercase: TextTransformExtension {
+struct Uppercase: TextTransformExtension {
     typealias Configuration = TextTransformExtensionConfiguration<Uppercase>
     
     var configuration: Configuration { Configuration(self) }
@@ -20,5 +20,5 @@ class Uppercase: TextTransformExtension {
         input.uppercased()
     }
     
-    required init() { }
+    init() { }
 }

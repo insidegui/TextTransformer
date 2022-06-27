@@ -101,6 +101,8 @@
 		F4228FCF286A177400C13F80 /* TextTransformerSDK */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TextTransformerSDK; sourceTree = "<group>"; };
 		F4228FD3286A1AB400C13F80 /* TextTransformExtensionHost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTransformExtensionHost.swift; sourceTree = "<group>"; };
 		F4228FD8286A1B2F00C13F80 /* TextTransformerExtensionXPCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTransformerExtensionXPCClient.swift; sourceTree = "<group>"; };
+		F4228FDD286A1F4F00C13F80 /* GenericExtension.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GenericExtension.png; sourceTree = "<group>"; };
+		F4228FDE286A218600C13F80 /* ManageExtensions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManageExtensions.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,8 +135,9 @@
 		F4228F692869EE2500C13F80 = {
 			isa = PBXGroup;
 			children = (
-				F4228FCF286A177400C13F80 /* TextTransformerSDK */,
+				F4228FDC286A1F1600C13F80 /* Images */,
 				F4228FCE286A14F100C13F80 /* README.md */,
+				F4228FCF286A177400C13F80 /* TextTransformerSDK */,
 				F4228F742869EE2500C13F80 /* TextTransformer */,
 				F4228FA22869FAE200C13F80 /* ExtensionProvider */,
 				F4228FB52869FB0000C13F80 /* Uppercase */,
@@ -226,6 +229,15 @@
 				F4228FD8286A1B2F00C13F80 /* TextTransformerExtensionXPCClient.swift */,
 			);
 			path = XPC;
+			sourceTree = "<group>";
+		};
+		F4228FDC286A1F1600C13F80 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F4228FDD286A1F4F00C13F80 /* GenericExtension.png */,
+				F4228FDE286A218600C13F80 /* ManageExtensions.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
