@@ -6,7 +6,7 @@ extension String: LocalizedError {
     public var errorDescription: String? { self }
 }
 
-@_spi(TextTransformerXPC)
+@_spi(TextTransformerSPI)
 @objc public protocol TextTransformerXPCProtocol: NSObjectProtocol {
     func transform(input: String, reply: @escaping (String?) -> Void)
 }

@@ -1,39 +1,46 @@
-//
-//  TextTransformExtensionHost.swift
-//  TextTransformerKit
-//
-//  Created by Guilherme Rambo on 27/06/22.
-//
-
 import Cocoa
+import SwiftUI
 import ExtensionFoundation
 import ExtensionKit
-@_spi(TextTransformerXPC) import TextTransformerSDK
+@_spi(TextTransformerSPI) import TextTransformerSDK
 
-public struct TextTransformExtensionInfo: Identifiable, Hashable {
+enum TextTransformExtensionPoint: String, CaseIterable {
+    case nonUI = "codes.rambo.experiment.TextTransformer.extension"
+    case UI = "codes.rambo.experiment.TextTransformer.uiextension"
+}
+
+struct TextTransformExtensionInfo: Identifiable, Hashable {
     
-    public let id: String
-    public let name: String
+    let id: String
+    let name: String
     let identity: AppExtensionIdentity
+    let extensionPoint: TextTransformExtensionPoint
     
     init(with identity: AppExtensionIdentity) {
+        guard let extPoint = TextTransformExtensionPoint(rawValue: identity.extensionPointIdentifier) else {
+            preconditionFailure("Received an extension with invalid extension point: \(identity)")
+        }
+        
         self.id = identity.bundleIdentifier
         self.name = identity.localizedName
         self.identity = identity
+        self.extensionPoint = extPoint
     }
+    
+    var hasUI: Bool { extensionPoint == .UI }
     
 }
 
-public final class TextTransformExtensionHost: ObservableObject {
+final class TextTransformExtensionHost: ObservableObject {
     
-    public init() { }
+    init() { }
     
     @Published
-    public private(set) var extensions: [TextTransformExtensionInfo] = []
+    private(set) var extensions: [TextTransformExtensionInfo] = []
     
     private var activated = false
     
-    public func activate() {
+    func activate() {
         guard !activated else { return }
         activated = true
         
@@ -42,7 +49,9 @@ public final class TextTransformExtensionHost: ObservableObject {
     
     private func discoveryTask() async {
         do {
-            let sequence = try AppExtensionIdentity.matching(appExtensionPointIDs: "codes.rambo.experiment.TextTransformer.extension")
+            let sequence = try AppExtensionIdentity.matching(
+                appExtensionPointIDs: TextTransformExtensionPoint.nonUI.rawValue, TextTransformExtensionPoint.UI.rawValue
+            )
             for await identities in sequence {
                 await MainActor.run {
                     self.extensions = identities.map { TextTransformExtensionInfo(with: $0) }
@@ -53,7 +62,7 @@ public final class TextTransformExtensionHost: ObservableObject {
         }
     }
     
-    public var availability: AsyncStream<AppExtensionIdentity.Availability> { AppExtensionIdentity.availabilityUpdates }
+    var availability: AsyncStream<AppExtensionIdentity.Availability> { AppExtensionIdentity.availabilityUpdates }
     
     private lazy var managerWindowController: NSWindowController = {
         let window = NSPanel(contentRect: NSRect(x: 0, y: 0, width: 200, height: 200), styleMask: [.titled, .closable], backing: .buffered, defer: false)
@@ -65,12 +74,12 @@ public final class TextTransformExtensionHost: ObservableObject {
         return c
     }()
     
-    public func showExtensionManager() {
+    func showExtensionManager() {
         managerWindowController.showWindow(nil)
         managerWindowController.window?.center()
     }
     
-    public func transform(_ input: String, using ext: TextTransformExtensionInfo) async throws -> String {
+    func transform(_ input: String, using ext: TextTransformExtensionInfo) async throws -> String {
         let config = AppExtensionProcess.Configuration(appExtensionIdentity: ext.identity)
         let proc = try await AppExtensionProcess(configuration: config)
         
@@ -82,3 +91,4 @@ public final class TextTransformExtensionHost: ObservableObject {
     }
     
 }
+

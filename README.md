@@ -127,7 +127,7 @@ The way I chose to implement the simple protocol used by TextTransformer was to 
 Here's the protocol itself:
 
 ```swift
-@_spi(TextTransformerXPC)
+@_spi(TextTransformerSPI)
 @objc public protocol TextTransformerXPCProtocol: NSObjectProtocol {
     func transform(input: String, reply: @escaping (String?) -> Void)
 }
@@ -199,6 +199,170 @@ The rest is pretty much just grabbing the remote object proxy (an instance of _s
 
 If you're not familiar with XPC, this may all seem really alien, but it's not as complicated as it sounds.
 
+## UI extensions
+
+With ExtensionKit, Mac apps can also define extension points that support extensions presenting their own user interface.
+
+In this sample project, I've added another extension point, called `codes.rambo.experiment.TextTransformer.uiextension`, by following the same approach of adding the `.appextensionpoint` file, this time setting the `EXPresentsUserInterface` property to `true`:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>codes.rambo.experiment.TextTransformer.uiextension</key>
+    <dict>
+        <key>EXPresentsUserInterface</key>
+        <true/>
+    </dict>
+</dict>
+</plist>
+```
+
+For this example, I decided to use the UI extension point to give extensions the ability to provide configuration options for the text transformations that they perform.
+
+I've included another sample extension in the `ExtensionProvider` app called `Shuffle`, which shuffles the input string, randomizing it. This `Shuffle` extension offers an option to also uppercase the shuffled string, and this option can be toggled in a configuration UI provided by the extension:
+
+![Popover for configuring the Shuffle extension](./Images/UIExtension.png)
+
+The thing to keep in mind here is that the toggle you're seeing in that popover is not being created in the TextTransformer app, what you're seeing is a "portal" into the `Shuffle` app extension itself, which is creating that view and controlling what happens to it, as well as responding to its events.
+
+The TextTransformer SDK provides a new protocol that extensions can conform to if they wish to provide a custom configuration UI:
+
+```swift
+/// Protocol implemented by text transform extensions that also provide a view for configuration options.
+///
+/// You create a struct conforming to this protocol and implement the ``transform(_:)`` method
+/// in order to perform the custom text transformation that your extension provides to the app, just like the non-ui variant (``TextTransformExtension``).
+///
+/// Extensions also implement the ``body`` property, providing a scene with the user interface to configure
+/// settings specific to the functionality of this extension.
+public protocol TextTransformUIExtension: TextTransformExtension where Configuration == AppExtensionSceneConfiguration {
+    
+    associatedtype Body: TextTransformUIExtensionScene
+    var body: Body { get }
+    
+}
+```
+
+Notice that `TextTransformUIExtension` inherits from `TextTransformExtension`, since the UI extension will be both providing the configuration UI, as well as performing the text transformation itself. This was just how I decided to do it for this sample project, but you may want to design the API differently depending on your extension point's needs. For example, I could have named this other extension point something like "TextTransformConfigurationExtension", which would be used to configure an extension's options, but wouldn't actually be providing any text transformation functionality.
+
+Implementing the `Shuffle` extension now looks like this:
+
+```swift
+import SwiftUI
+import TextTransformerSDK
+
+/// Sample extension that shuffles the input string and provides an "options" scene
+/// with UI to toggle between also uppercasing the string when doing the shuffle.
+@main
+struct Shuffle: TextTransformUIExtension {
+    init() { }
+    
+    var body: some TextTransformUIExtensionScene {
+        TextTransformUIExtensionOptionsScene {
+            ShuffleOptions()
+        }
+    }
+    
+    func transform(_ input: String) async -> String? {
+        // ...
+    }
+}
+
+struct ShuffleOptions: View {
+    @AppStorage(Shuffle.uppercaseEnabledKey)
+    private var uppercaseEnabled = false
+    
+    var body: some View {
+        Toggle("Also Uppercase", isOn: $uppercaseEnabled)
+    }    
+}
+```
+
+Thanks to `@main` and the fact that the base `AppExtension` protocol implements a `static func main()` for us, this looks pretty much like a standard SwiftUI app entry point.
+
+The implementation for `TextTransformUIExtensionOptionsScene` can be seen below, it's basically wrapping the view provided by the extension's `body` property in a `PrimitiveAppExtensionScene`, which comes from ExtensionKit. It uses a custom wrapper view type that ensures the contents are contained within a `Form` that uses the `.grouped` style, as well as enforcing a minimum frame size and padding, which would be a way to keep things consistent between extensions in a real app.
+
+```swift
+/// Protocol implemented by scenes that can be used in `TextTransformUIExtension.body`.
+public protocol TextTransformUIExtensionScene: AppExtensionScene {}
+
+/// A concrete implementation of `TextTransformUIExtensionScene` that provides a form where the user can configure options for a given extension.
+/// You return an instance of this scene type from the `TextTransformUIExtension.body` property.
+///
+/// The content of the scene is where you create your user interface, using SwiftUI.
+/// Do not use any property wrappers that invalidate the view hierarchy directly in your extension, wrap your UI in a custom view type
+/// and add any property wrappers to the view.
+public struct TextTransformUIExtensionOptionsScene<Content>: TextTransformUIExtensionScene where Content: View {
+    
+    public init(@ViewBuilder content: @escaping () -> Content) {
+        self.content = content
+    }
+    
+    private let content: () -> Content
+    
+    public var body: some AppExtensionScene {
+        PrimitiveAppExtensionScene(id: TextTransformUIExtensionOptionsSceneID) {
+            TextTransformUIExtensionOptionsContainer(content: content)
+        } onConnection: { connection in
+            connection.resume()
+            
+            return true
+        }
+    }
+}
+```
+
+The `id` provided to the `PrimitiveAppExtensionScene` is a custom string. Your SDK can provide multiple types of scenes that extensions can use, and each scene type is identified by this string. Each scene can also have its own XPC connection, which could use a different protocol from the main connection that you've seen before. For this simple example, I just resume the connection and return true, without performing any communication over that channel.
+
+In TextTransformer itself, I've extended the `TextTransformExtensionHost` so that it can provide a SwiftUI view for a given extension's options scene:
+
+```swift
+extension TextTransformExtensionHost {
+    
+    /// Returns a SwiftUI view for the extension's "options" scene.
+    /// - Parameter appExtension: The extension  to get the options scene for (must be a UI extension).
+    /// - Returns: A SwiftUI view that renders and controls the extension's options UI.
+    func optionsView(for appExtension: TextTransformExtensionInfo) -> some View {
+        return TextTransformerUIExtensionHostViewWrapper(appExtension: appExtension)
+    }
+    
+}
+```
+
+To actually display the scene, ExtensionKit provides `EXHostViewController`, which I have wrapped in an `NSViewControllerRepresentable` to make it easy to use from TextTransformer's UI, which is all implemented in SwiftUI.
+
+Here's how the `EXHostViewController` is being configured in TextTransformer:
+
+```swift
+// TextTransformExtensionHost.swift
+
+// ...
+
+// TextTransformerExtensionUIController
+
+let identity: AppExtensionIdentity
+
+init(with appExtension: TextTransformExtensionInfo) {
+    // ...
+}
+
+// ...
+
+private lazy var host: EXHostViewController = {
+    let c = EXHostViewController()
+    c.configuration = EXHostViewController.Configuration(appExtension: identity, sceneID: TextTransformUIExtensionOptionsSceneID)
+    c.delegate = self
+    c.placeholderView = NSHostingView(rootView: TextTransformUIExtensionPlaceholderView())
+    return c
+}()
+```
+
+Pretty simple. The instance of `EXHostViewController` is then embedded into `TextTransformerExtensionUIController`, which is then wrapped in an `NSViewControllerRepresentable` so that the app can display it in SwiftUI using a popover.
+
+The delegate for `EXHostViewController` has callbacks for XPC connection errors, and it also has a callback to configure the `NSXPCConnection`, which in my example is not doing anything other than resuming it and returning true.
+
 ## Comments and use cases
 
 Plug-ins for software have been around for a really long time. Traditional ways of implementing plug-ins on macOS would typically involve the host app loading an untrusted bundle of code into its own address space, which can have serious impacts in performance, security, and reliability.
@@ -207,8 +371,6 @@ When Apple began introducing extensions into its operating systems back in the i
 
 The result is a system that protects user privacy and leads to a more reliable experience overall, since in general a poorly behaving extension can't crash the app that's trying to use it (but that largely depends on how the extension hosting is implemented).
 
-Use cases for custom extension points on Mac apps include any idea that involves external developers augmenting our apps with code running at native speeds, with access to the full macOS SDK, while at the same time isolating that code from our apps, protecting the trust that users have in them. 
-
-ExtensionKit extension points can even provide UI, which I haven't covered here, and that expands the realm of possibilities even more.
+Use cases for custom extension points on Mac apps include any idea that involves external developers augmenting our apps with code running at native speeds, with access to the full macOS SDK, while at the same time isolating that code from our apps, protecting the trust that users have in them.
 
 If you have a Mac app that currently provides other ways for developers to write scripts or extensions for it, or if you have an idea for a type of app that could benefit from third-party extensions, I'd consider implementing them with ExtensionKit. 

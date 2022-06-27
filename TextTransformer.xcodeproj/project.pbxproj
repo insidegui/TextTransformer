@@ -23,6 +23,11 @@
 		F4228FD6286A1AC100C13F80 /* TextTransformerSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F4228FD5286A1AC100C13F80 /* TextTransformerSDK */; };
 		F4228FD9286A1B2F00C13F80 /* TextTransformerExtensionXPCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4228FD8286A1B2F00C13F80 /* TextTransformerExtensionXPCClient.swift */; };
 		F4228FDB286A1B8C00C13F80 /* TextTransformerSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F4228FDA286A1B8C00C13F80 /* TextTransformerSDK */; };
+		F45A2625286A3C09004B61C9 /* TextTransformExtensionHost+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45A2624286A3C09004B61C9 /* TextTransformExtensionHost+UI.swift */; };
+		F47EE335286A2EAE00132067 /* codes.rambo.experiment.TextTransformer.uiextension.appextensionpoint in Embed Extension Points */ = {isa = PBXBuildFile; fileRef = F47EE334286A2E9B00132067 /* codes.rambo.experiment.TextTransformer.uiextension.appextensionpoint */; };
+		F47EE33D286A2FE000132067 /* Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EE33C286A2FE000132067 /* Shuffle.swift */; };
+		F47EE341286A2FE000132067 /* Shuffle.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = F47EE33A286A2FE000132067 /* Shuffle.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F47EE346286A302200132067 /* TextTransformerSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F47EE345286A302200132067 /* TextTransformerSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +37,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = F4228FB32869FB0000C13F80;
 			remoteInfo = Uppercase;
+		};
+		F47EE33F286A2FE000132067 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4228F6A2869EE2500C13F80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F47EE339286A2FE000132067;
+			remoteInfo = Shuffle;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -52,6 +64,7 @@
 			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
 			dstSubfolderSpec = 16;
 			files = (
+				F47EE335286A2EAE00132067 /* codes.rambo.experiment.TextTransformer.uiextension.appextensionpoint in Embed Extension Points */,
 				F4228F9A2869F89F00C13F80 /* codes.rambo.experiment.TextTransformer.extension.appextensionpoint in Embed Extension Points */,
 			);
 			name = "Embed Extension Points";
@@ -63,6 +76,7 @@
 			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
 			dstSubfolderSpec = 16;
 			files = (
+				F47EE341286A2FE000132067 /* Shuffle.appex in Embed ExtensionKit Extensions */,
 				F4228FBB2869FB0000C13F80 /* Uppercase.appex in Embed ExtensionKit Extensions */,
 			);
 			name = "Embed ExtensionKit Extensions";
@@ -103,7 +117,13 @@
 		F4228FD8286A1B2F00C13F80 /* TextTransformerExtensionXPCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTransformerExtensionXPCClient.swift; sourceTree = "<group>"; };
 		F4228FDD286A1F4F00C13F80 /* GenericExtension.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GenericExtension.png; sourceTree = "<group>"; };
 		F4228FDE286A218600C13F80 /* ManageExtensions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManageExtensions.png; sourceTree = "<group>"; };
+		F45A2624286A3C09004B61C9 /* TextTransformExtensionHost+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextTransformExtensionHost+UI.swift"; sourceTree = "<group>"; };
+		F45A2659286A43FB004B61C9 /* UIExtension.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIExtension.png; sourceTree = "<group>"; };
 		F47EE333286A27D400132067 /* Hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hero.png; sourceTree = "<group>"; };
+		F47EE334286A2E9B00132067 /* codes.rambo.experiment.TextTransformer.uiextension.appextensionpoint */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = codes.rambo.experiment.TextTransformer.uiextension.appextensionpoint; sourceTree = "<group>"; };
+		F47EE33A286A2FE000132067 /* Shuffle.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = Shuffle.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F47EE33C286A2FE000132067 /* Shuffle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shuffle.swift; sourceTree = "<group>"; };
+		F47EE33E286A2FE000132067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +150,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F47EE337286A2FE000132067 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47EE346286A302200132067 /* TextTransformerSDK in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -142,6 +170,7 @@
 				F4228F742869EE2500C13F80 /* TextTransformer */,
 				F4228FA22869FAE200C13F80 /* ExtensionProvider */,
 				F4228FB52869FB0000C13F80 /* Uppercase */,
+				F47EE33B286A2FE000132067 /* Shuffle */,
 				F4228F732869EE2500C13F80 /* Products */,
 				F4228FC22869FB0B00C13F80 /* Frameworks */,
 			);
@@ -153,6 +182,7 @@
 				F4228F722869EE2500C13F80 /* TextTransformer.app */,
 				F4228FA12869FAE200C13F80 /* ExtensionProvider.app */,
 				F4228FB42869FB0000C13F80 /* Uppercase.appex */,
+				F47EE33A286A2FE000132067 /* Shuffle.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,6 +197,7 @@
 				F4228F7E2869EE2500C13F80 /* TextTransformer.entitlements */,
 				F4228F7B2869EE2500C13F80 /* Preview Content */,
 				F4228F972869F84900C13F80 /* codes.rambo.experiment.TextTransformer.extension.appextensionpoint */,
+				F47EE334286A2E9B00132067 /* codes.rambo.experiment.TextTransformer.uiextension.appextensionpoint */,
 			);
 			path = TextTransformer;
 			sourceTree = "<group>";
@@ -220,6 +251,7 @@
 			children = (
 				F4228FD7286A1B1D00C13F80 /* XPC */,
 				F4228FD3286A1AB400C13F80 /* TextTransformExtensionHost.swift */,
+				F45A2624286A3C09004B61C9 /* TextTransformExtensionHost+UI.swift */,
 			);
 			path = "Extension Hosting";
 			sourceTree = "<group>";
@@ -238,8 +270,18 @@
 				F47EE333286A27D400132067 /* Hero.png */,
 				F4228FDD286A1F4F00C13F80 /* GenericExtension.png */,
 				F4228FDE286A218600C13F80 /* ManageExtensions.png */,
+				F45A2659286A43FB004B61C9 /* UIExtension.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		F47EE33B286A2FE000132067 /* Shuffle */ = {
+			isa = PBXGroup;
+			children = (
+				F47EE33C286A2FE000132067 /* Shuffle.swift */,
+				F47EE33E286A2FE000132067 /* Info.plist */,
+			);
+			path = Shuffle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +323,7 @@
 			);
 			dependencies = (
 				F4228FBA2869FB0000C13F80 /* PBXTargetDependency */,
+				F47EE340286A2FE000132067 /* PBXTargetDependency */,
 			);
 			name = ExtensionProvider;
 			productName = ExtensionProvider;
@@ -307,6 +350,26 @@
 			productReference = F4228FB42869FB0000C13F80 /* Uppercase.appex */;
 			productType = "com.apple.product-type.extensionkit-extension";
 		};
+		F47EE339286A2FE000132067 /* Shuffle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F47EE342286A2FE000132067 /* Build configuration list for PBXNativeTarget "Shuffle" */;
+			buildPhases = (
+				F47EE336286A2FE000132067 /* Sources */,
+				F47EE337286A2FE000132067 /* Frameworks */,
+				F47EE338286A2FE000132067 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shuffle;
+			packageProductDependencies = (
+				F47EE345286A302200132067 /* TextTransformerSDK */,
+			);
+			productName = Shuffle;
+			productReference = F47EE33A286A2FE000132067 /* Shuffle.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -326,6 +389,9 @@
 					F4228FB32869FB0000C13F80 = {
 						CreatedOnToolsVersion = 14.0;
 					};
+					F47EE339286A2FE000132067 = {
+						CreatedOnToolsVersion = 14.0;
+					};
 				};
 			};
 			buildConfigurationList = F4228F6D2869EE2500C13F80 /* Build configuration list for PBXProject "TextTransformer" */;
@@ -337,6 +403,8 @@
 				Base,
 			);
 			mainGroup = F4228F692869EE2500C13F80;
+			packageReferences = (
+			);
 			productRefGroup = F4228F732869EE2500C13F80 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -344,6 +412,7 @@
 				F4228F712869EE2500C13F80 /* TextTransformer */,
 				F4228FA02869FAE200C13F80 /* ExtensionProvider */,
 				F4228FB32869FB0000C13F80 /* Uppercase */,
+				F47EE339286A2FE000132067 /* Shuffle */,
 			);
 		};
 /* End PBXProject section */
@@ -375,6 +444,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F47EE338286A2FE000132067 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -384,6 +460,7 @@
 			files = (
 				F4228F782869EE2500C13F80 /* ContentView.swift in Sources */,
 				F4228FD9286A1B2F00C13F80 /* TextTransformerExtensionXPCClient.swift in Sources */,
+				F45A2625286A3C09004B61C9 /* TextTransformExtensionHost+UI.swift in Sources */,
 				F4228FD4286A1AB400C13F80 /* TextTransformExtensionHost.swift in Sources */,
 				F4228F762869EE2500C13F80 /* TextTransformerApp.swift in Sources */,
 			);
@@ -406,6 +483,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F47EE336286A2FE000132067 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47EE33D286A2FE000132067 /* Shuffle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -413,6 +498,11 @@
 			isa = PBXTargetDependency;
 			target = F4228FB32869FB0000C13F80 /* Uppercase */;
 			targetProxy = F4228FB92869FB0000C13F80 /* PBXContainerItemProxy */;
+		};
+		F47EE340286A2FE000132067 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F47EE339286A2FE000132067 /* Shuffle */;
+			targetProxy = F47EE33F286A2FE000132067 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -694,6 +784,58 @@
 			};
 			name = Release;
 		};
+		F47EE343286A2FE000132067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shuffle/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Shuffle;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.rambo.experiment.ExtensionProvider.Shuffle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F47EE344286A2FE000132067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shuffle/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Shuffle;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.rambo.experiment.ExtensionProvider.Shuffle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -733,6 +875,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		F47EE342286A2FE000132067 /* Build configuration list for PBXNativeTarget "Shuffle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F47EE343286A2FE000132067 /* Debug */,
+				F47EE344286A2FE000132067 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -741,6 +892,10 @@
 			productName = TextTransformerSDK;
 		};
 		F4228FDA286A1B8C00C13F80 /* TextTransformerSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TextTransformerSDK;
+		};
+		F47EE345286A302200132067 /* TextTransformerSDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TextTransformerSDK;
 		};

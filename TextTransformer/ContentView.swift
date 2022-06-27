@@ -16,22 +16,40 @@ struct ContentView: View {
     
     @State var selectedExtension: TextTransformExtensionInfo?
     
+    @State var configuringExtension: TextTransformExtensionInfo?
+
     @State var isLoading = false
     
     var body: some View {
         Form {
-            Picker("Extension", selection: $selectedExtension) {
-                if selectedExtension == nil {
-                    Text("Select")
-                        .tag(Optional<TextTransformExtensionInfo>.none)
+            HStack {
+                Picker("Extension", selection: $selectedExtension) {
+                    if selectedExtension == nil {
+                        Text("Select")
+                            .tag(Optional<TextTransformExtensionInfo>.none)
+                    }
+                    
+                    ForEach(host.extensions) { info in
+                        Text(info.name)
+                            .tag(Optional<TextTransformExtensionInfo>.some(info))
+                    }
                 }
+                .disabled(host.extensions.isEmpty)
                 
-                ForEach(host.extensions) { info in
-                    Text(info.name)
-                        .tag(Optional<TextTransformExtensionInfo>.some(info))
+                if let selectedExtension, selectedExtension.hasUI {
+                    Button {
+                        configuringExtension = selectedExtension
+                    } label: {
+                        Image(systemName: "ellipsis.circle")
+                    }
+                    .help("Configure \(selectedExtension.name)")
+                    .buttonStyle(.plain)
+                    .foregroundColor(.accentColor)
+                    .popover(item: $configuringExtension) { appExtension in
+                        host.optionsView(for: appExtension)
+                    }
                 }
             }
-            .disabled(host.extensions.isEmpty)
             
             HStack {
                 TextField("Text To Transform", text: $text)

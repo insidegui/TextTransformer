@@ -1,10 +1,3 @@
-//
-//  TextTransformExtension.swift
-//  TextTransformerKit
-//
-//  Created by Guilherme Rambo on 27/06/22.
-//
-
 import Foundation
 import ExtensionFoundation
 

@@ -7,7 +7,7 @@
 
 import Foundation
 import ExtensionFoundation
-@_spi(TextTransformerXPC) import TextTransformerSDK
+@_spi(TextTransformerSPI) import TextTransformerSDK
 
 final class TextTransformerExtensionXPCClient: NSObject {
     
