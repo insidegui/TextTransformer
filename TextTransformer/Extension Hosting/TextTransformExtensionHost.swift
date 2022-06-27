@@ -70,15 +70,11 @@ public final class TextTransformExtensionHost: ObservableObject {
         managerWindowController.window?.center()
     }
     
-    private var activeClient: TextTransformerExtensionXPCClient?
-    
     public func transform(_ input: String, using ext: TextTransformExtensionInfo) async throws -> String {
         let config = AppExtensionProcess.Configuration(appExtensionIdentity: ext.identity)
         let proc = try await AppExtensionProcess(configuration: config)
-        let client = TextTransformerExtensionXPCClient(with: proc)
         
-        activeClient = client
-        defer { activeClient = nil }
+        let client = TextTransformerExtensionXPCClient(with: proc)
         
         let response = try await client.runOperation(with: input)
         

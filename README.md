@@ -58,7 +58,7 @@ To create a target for a custom extension point, you can pick the "Generic Exten
 
 ![Generic Extension target template screenshot](./Images/GenericExtension.png)
 
-The `Uppercase` target declares support for the custom extension point in its Info.plist by settings the corresponding identifier for the `EXAppExtensionAttributes.EXExtensionPointIdentifier` property:
+The `Uppercase` target declares support for the custom extension point in its Info.plist by setting the corresponding identifier for the `EXAppExtensionAttributes.EXExtensionPointIdentifier` property:
 
 ```xml
 <key>EXExtensionPointIdentifier</key>

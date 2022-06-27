@@ -17,8 +17,6 @@ final class TextTransformerExtensionXPCClient: NSObject {
         self.process = process
     }
     
-    private var currentConnection: NSXPCConnection?
-    
     public func runOperation(with input: String) async throws -> String {
         var done = false
         
@@ -26,12 +24,8 @@ final class TextTransformerExtensionXPCClient: NSObject {
         connection.remoteObjectInterface = NSXPCInterface(with: TextTransformerXPCProtocol.self)
         
         connection.resume()
-        
-        currentConnection = connection
-        
+    
         return try await withCheckedThrowingContinuation { continuation in
-            defer { currentConnection = nil }
-            
             guard let service = connection.remoteObjectProxyWithErrorHandler({ error in
                 if !done {
                     continuation.resume(throwing: error)
