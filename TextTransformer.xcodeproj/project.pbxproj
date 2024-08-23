@@ -95,6 +95,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AA46B0512C7792D1002982FB /* Uppercase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Uppercase.entitlements; sourceTree = "<group>"; };
+		AA46B0522C7792D5002982FB /* Shuffle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shuffle.entitlements; sourceTree = "<group>"; };
 		F4228F722869EE2500C13F80 /* TextTransformer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextTransformer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4228F752869EE2500C13F80 /* TextTransformerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTransformerApp.swift; sourceTree = "<group>"; };
 		F4228F772869EE2500C13F80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 		F4228FB52869FB0000C13F80 /* Uppercase */ = {
 			isa = PBXGroup;
 			children = (
+				AA46B0512C7792D1002982FB /* Uppercase.entitlements */,
 				F4228FB62869FB0000C13F80 /* Uppercase.swift */,
 				F4228FB82869FB0000C13F80 /* Info.plist */,
 			);
@@ -278,6 +281,7 @@
 		F47EE33B286A2FE000132067 /* Shuffle */ = {
 			isa = PBXGroup;
 			children = (
+				AA46B0522C7792D5002982FB /* Shuffle.entitlements */,
 				F47EE33C286A2FE000132067 /* Shuffle.swift */,
 				F47EE33E286A2FE000132067 /* Info.plist */,
 			);
@@ -735,6 +739,7 @@
 		F4228FBD2869FB0000C13F80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Uppercase/Uppercase.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8C7439RJLG;
@@ -761,6 +766,7 @@
 		F4228FBE2869FB0000C13F80 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Uppercase/Uppercase.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8C7439RJLG;
@@ -787,6 +793,7 @@
 		F47EE343286A2FE000132067 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Shuffle/Shuffle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8C7439RJLG;
@@ -813,6 +820,7 @@
 		F47EE344286A2FE000132067 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Shuffle/Shuffle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8C7439RJLG;
