@@ -52,7 +52,7 @@ struct ContentView: View {
             }
             
             HStack {
-                TextField("Text To Transform", text: $text)
+                TextField("Text To Transform", text: $text, prompt: Text("Text to transform"))
                     .labelsHidden()
                 
                 if isLoading {
