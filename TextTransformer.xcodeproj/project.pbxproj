@@ -3,29 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 73;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F4228F762869EE2500C13F80 /* TextTransformerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4228F752869EE2500C13F80 /* TextTransformerApp.swift */; };
-		F4228F782869EE2500C13F80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4228F772869EE2500C13F80 /* ContentView.swift */; };
-		F4228F7A2869EE2500C13F80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4228F792869EE2500C13F80 /* Assets.xcassets */; };
-		F4228F7D2869EE2500C13F80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4228F7C2869EE2500C13F80 /* Preview Assets.xcassets */; };
-		F4228F982869F84900C13F80 /* codes.rambo.experiment.TextTransformer.extension.appextensionpoint in Resources */ = {isa = PBXBuildFile; fileRef = F4228F972869F84900C13F80 /* codes.rambo.experiment.TextTransformer.extension.appextensionpoint */; };
-		F4228F9A2869F89F00C13F80 /* codes.rambo.experiment.TextTransformer.extension.appextensionpoint in Embed Extension Points */ = {isa = PBXBuildFile; fileRef = F4228F972869F84900C13F80 /* codes.rambo.experiment.TextTransformer.extension.appextensionpoint */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		F4228FA42869FAE200C13F80 /* ExtensionProviderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4228FA32869FAE200C13F80 /* ExtensionProviderApp.swift */; };
-		F4228FA62869FAE200C13F80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4228FA52869FAE200C13F80 /* ContentView.swift */; };
-		F4228FA82869FAE300C13F80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4228FA72869FAE300C13F80 /* Assets.xcassets */; };
-		F4228FAB2869FAE300C13F80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4228FAA2869FAE300C13F80 /* Preview Assets.xcassets */; };
-		F4228FB72869FB0000C13F80 /* Uppercase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4228FB62869FB0000C13F80 /* Uppercase.swift */; };
 		F4228FBB2869FB0000C13F80 /* Uppercase.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = F4228FB42869FB0000C13F80 /* Uppercase.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F4228FD4286A1AB400C13F80 /* TextTransformExtensionHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4228FD3286A1AB400C13F80 /* TextTransformExtensionHost.swift */; };
 		F4228FD6286A1AC100C13F80 /* TextTransformerSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F4228FD5286A1AC100C13F80 /* TextTransformerSDK */; };
-		F4228FD9286A1B2F00C13F80 /* TextTransformerExtensionXPCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4228FD8286A1B2F00C13F80 /* TextTransformerExtensionXPCClient.swift */; };
 		F4228FDB286A1B8C00C13F80 /* TextTransformerSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F4228FDA286A1B8C00C13F80 /* TextTransformerSDK */; };
-		F45A2625286A3C09004B61C9 /* TextTransformExtensionHost+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45A2624286A3C09004B61C9 /* TextTransformExtensionHost+UI.swift */; };
-		F47EE335286A2EAE00132067 /* codes.rambo.experiment.TextTransformer.uiextension.appextensionpoint in Embed Extension Points */ = {isa = PBXBuildFile; fileRef = F47EE334286A2E9B00132067 /* codes.rambo.experiment.TextTransformer.uiextension.appextensionpoint */; };
-		F47EE33D286A2FE000132067 /* Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EE33C286A2FE000132067 /* Shuffle.swift */; };
 		F47EE341286A2FE000132067 /* Shuffle.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = F47EE33A286A2FE000132067 /* Shuffle.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F47EE346286A302200132067 /* TextTransformerSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F47EE345286A302200132067 /* TextTransformerSDK */; };
 /* End PBXBuildFile section */
@@ -64,8 +48,6 @@
 			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
 			dstSubfolderSpec = 16;
 			files = (
-				F47EE335286A2EAE00132067 /* codes.rambo.experiment.TextTransformer.uiextension.appextensionpoint in Embed Extension Points */,
-				F4228F9A2869F89F00C13F80 /* codes.rambo.experiment.TextTransformer.extension.appextensionpoint in Embed Extension Points */,
 			);
 			name = "Embed Extension Points";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,38 +77,61 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AA46B0512C7792D1002982FB /* Uppercase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Uppercase.entitlements; sourceTree = "<group>"; };
-		AA46B0522C7792D5002982FB /* Shuffle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shuffle.entitlements; sourceTree = "<group>"; };
 		F4228F722869EE2500C13F80 /* TextTransformer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextTransformer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4228F752869EE2500C13F80 /* TextTransformerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTransformerApp.swift; sourceTree = "<group>"; };
-		F4228F772869EE2500C13F80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		F4228F792869EE2500C13F80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F4228F7C2869EE2500C13F80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F4228F7E2869EE2500C13F80 /* TextTransformer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TextTransformer.entitlements; sourceTree = "<group>"; };
-		F4228F972869F84900C13F80 /* codes.rambo.experiment.TextTransformer.extension.appextensionpoint */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = codes.rambo.experiment.TextTransformer.extension.appextensionpoint; sourceTree = "<group>"; };
 		F4228FA12869FAE200C13F80 /* ExtensionProvider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtensionProvider.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4228FA32869FAE200C13F80 /* ExtensionProviderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionProviderApp.swift; sourceTree = "<group>"; };
-		F4228FA52869FAE200C13F80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		F4228FA72869FAE300C13F80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F4228FAA2869FAE300C13F80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F4228FAC2869FAE300C13F80 /* ExtensionProvider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExtensionProvider.entitlements; sourceTree = "<group>"; };
 		F4228FB42869FB0000C13F80 /* Uppercase.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = Uppercase.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4228FB62869FB0000C13F80 /* Uppercase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uppercase.swift; sourceTree = "<group>"; };
-		F4228FB82869FB0000C13F80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4228FCE286A14F100C13F80 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F4228FCF286A177400C13F80 /* TextTransformerSDK */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TextTransformerSDK; sourceTree = "<group>"; };
-		F4228FD3286A1AB400C13F80 /* TextTransformExtensionHost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTransformExtensionHost.swift; sourceTree = "<group>"; };
-		F4228FD8286A1B2F00C13F80 /* TextTransformerExtensionXPCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTransformerExtensionXPCClient.swift; sourceTree = "<group>"; };
-		F4228FDD286A1F4F00C13F80 /* GenericExtension.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GenericExtension.png; sourceTree = "<group>"; };
-		F4228FDE286A218600C13F80 /* ManageExtensions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManageExtensions.png; sourceTree = "<group>"; };
-		F45A2624286A3C09004B61C9 /* TextTransformExtensionHost+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextTransformExtensionHost+UI.swift"; sourceTree = "<group>"; };
-		F45A2659286A43FB004B61C9 /* UIExtension.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIExtension.png; sourceTree = "<group>"; };
-		F47EE333286A27D400132067 /* Hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hero.png; sourceTree = "<group>"; };
-		F47EE334286A2E9B00132067 /* codes.rambo.experiment.TextTransformer.uiextension.appextensionpoint */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = codes.rambo.experiment.TextTransformer.uiextension.appextensionpoint; sourceTree = "<group>"; };
 		F47EE33A286A2FE000132067 /* Shuffle.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = Shuffle.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		F47EE33C286A2FE000132067 /* Shuffle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shuffle.swift; sourceTree = "<group>"; };
-		F47EE33E286A2FE000132067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F4B7258830ADD58200A57809 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				codes.rambo.experiment.TextTransformer.uiextension.appextensionpoint,
+			);
+			target = F4228F712869EE2500C13F80 /* TextTransformer */;
+		};
+		F4B7258A30ADD58200A57809 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Uppercase.swift,
+			);
+			target = F4228FB32869FB0000C13F80 /* Uppercase */;
+		};
+		F4B7258B30ADD58200A57809 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Shuffle.swift,
+			);
+			target = F47EE339286A2FE000132067 /* Shuffle */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		F4B7258930ADD58200A57809 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				codes.rambo.experiment.TextTransformer.extension.appextensionpoint = (
+					CodeSignOnCopy,
+				);
+			};
+			buildPhase = F4228F992869F88F00C13F80 /* Embed Extension Points */;
+			membershipExceptions = (
+				codes.rambo.experiment.TextTransformer.extension.appextensionpoint,
+				codes.rambo.experiment.TextTransformer.uiextension.appextensionpoint,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F4B7255930ADD57C00A57809 /* Images */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Images; sourceTree = "<group>"; };
+		F4B7255D30ADD58100A57809 /* Shuffle */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F4B7258B30ADD58200A57809 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Shuffle; sourceTree = "<group>"; };
+		F4B7256530ADD58100A57809 /* ExtensionProvider */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ExtensionProvider; sourceTree = "<group>"; };
+		F4B7256D30ADD58100A57809 /* Uppercase */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F4B7258A30ADD58200A57809 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Uppercase; sourceTree = "<group>"; };
+		F4B7257C30ADD58100A57809 /* TextTransformer */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F4B7258830ADD58200A57809 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F4B7258930ADD58200A57809 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = TextTransformer; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F4228F6F2869EE2500C13F80 /* Frameworks */ = {
@@ -166,13 +171,13 @@
 		F4228F692869EE2500C13F80 = {
 			isa = PBXGroup;
 			children = (
-				F4228FDC286A1F1600C13F80 /* Images */,
+				F4B7255930ADD57C00A57809 /* Images */,
 				F4228FCE286A14F100C13F80 /* README.md */,
 				F4228FCF286A177400C13F80 /* TextTransformerSDK */,
-				F4228F742869EE2500C13F80 /* TextTransformer */,
-				F4228FA22869FAE200C13F80 /* ExtensionProvider */,
-				F4228FB52869FB0000C13F80 /* Uppercase */,
-				F47EE33B286A2FE000132067 /* Shuffle */,
+				F4B7257C30ADD58100A57809 /* TextTransformer */,
+				F4B7256530ADD58100A57809 /* ExtensionProvider */,
+				F4B7256D30ADD58100A57809 /* Uppercase */,
+				F4B7255D30ADD58100A57809 /* Shuffle */,
 				F4228F732869EE2500C13F80 /* Products */,
 				F4228FC22869FB0B00C13F80 /* Frameworks */,
 			);
@@ -189,103 +194,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F4228F742869EE2500C13F80 /* TextTransformer */ = {
-			isa = PBXGroup;
-			children = (
-				F4228FD0286A1A7D00C13F80 /* Extension Hosting */,
-				F4228F752869EE2500C13F80 /* TextTransformerApp.swift */,
-				F4228F772869EE2500C13F80 /* ContentView.swift */,
-				F4228F792869EE2500C13F80 /* Assets.xcassets */,
-				F4228F7E2869EE2500C13F80 /* TextTransformer.entitlements */,
-				F4228F7B2869EE2500C13F80 /* Preview Content */,
-				F4228F972869F84900C13F80 /* codes.rambo.experiment.TextTransformer.extension.appextensionpoint */,
-				F47EE334286A2E9B00132067 /* codes.rambo.experiment.TextTransformer.uiextension.appextensionpoint */,
-			);
-			path = TextTransformer;
-			sourceTree = "<group>";
-		};
-		F4228F7B2869EE2500C13F80 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				F4228F7C2869EE2500C13F80 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		F4228FA22869FAE200C13F80 /* ExtensionProvider */ = {
-			isa = PBXGroup;
-			children = (
-				F4228FA32869FAE200C13F80 /* ExtensionProviderApp.swift */,
-				F4228FA52869FAE200C13F80 /* ContentView.swift */,
-				F4228FA72869FAE300C13F80 /* Assets.xcassets */,
-				F4228FAC2869FAE300C13F80 /* ExtensionProvider.entitlements */,
-				F4228FA92869FAE300C13F80 /* Preview Content */,
-			);
-			path = ExtensionProvider;
-			sourceTree = "<group>";
-		};
-		F4228FA92869FAE300C13F80 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				F4228FAA2869FAE300C13F80 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		F4228FB52869FB0000C13F80 /* Uppercase */ = {
-			isa = PBXGroup;
-			children = (
-				AA46B0512C7792D1002982FB /* Uppercase.entitlements */,
-				F4228FB62869FB0000C13F80 /* Uppercase.swift */,
-				F4228FB82869FB0000C13F80 /* Info.plist */,
-			);
-			path = Uppercase;
-			sourceTree = "<group>";
-		};
 		F4228FC22869FB0B00C13F80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F4228FD0286A1A7D00C13F80 /* Extension Hosting */ = {
-			isa = PBXGroup;
-			children = (
-				F4228FD7286A1B1D00C13F80 /* XPC */,
-				F4228FD3286A1AB400C13F80 /* TextTransformExtensionHost.swift */,
-				F45A2624286A3C09004B61C9 /* TextTransformExtensionHost+UI.swift */,
-			);
-			path = "Extension Hosting";
-			sourceTree = "<group>";
-		};
-		F4228FD7286A1B1D00C13F80 /* XPC */ = {
-			isa = PBXGroup;
-			children = (
-				F4228FD8286A1B2F00C13F80 /* TextTransformerExtensionXPCClient.swift */,
-			);
-			path = XPC;
-			sourceTree = "<group>";
-		};
-		F4228FDC286A1F1600C13F80 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				F47EE333286A27D400132067 /* Hero.png */,
-				F4228FDD286A1F4F00C13F80 /* GenericExtension.png */,
-				F4228FDE286A218600C13F80 /* ManageExtensions.png */,
-				F45A2659286A43FB004B61C9 /* UIExtension.png */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
-		F47EE33B286A2FE000132067 /* Shuffle */ = {
-			isa = PBXGroup;
-			children = (
-				AA46B0522C7792D5002982FB /* Shuffle.entitlements */,
-				F47EE33C286A2FE000132067 /* Shuffle.swift */,
-				F47EE33E286A2FE000132067 /* Info.plist */,
-			);
-			path = Shuffle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +217,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F4B7257C30ADD58100A57809 /* TextTransformer */,
 			);
 			name = TextTransformer;
 			packageProductDependencies = (
@@ -328,6 +244,9 @@
 			dependencies = (
 				F4228FBA2869FB0000C13F80 /* PBXTargetDependency */,
 				F47EE340286A2FE000132067 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F4B7256530ADD58100A57809 /* ExtensionProvider */,
 			);
 			name = ExtensionProvider;
 			productName = ExtensionProvider;
@@ -382,7 +301,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 2730;
 				TargetAttributes = {
 					F4228F712869EE2500C13F80 = {
 						CreatedOnToolsVersion = 14.0;
@@ -399,7 +318,6 @@
 				};
 			};
 			buildConfigurationList = F4228F6D2869EE2500C13F80 /* Build configuration list for PBXProject "TextTransformer" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -409,6 +327,7 @@
 			mainGroup = F4228F692869EE2500C13F80;
 			packageReferences = (
 			);
+			preferredProjectObjectVersion = 56;
 			productRefGroup = F4228F732869EE2500C13F80 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -426,9 +345,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4228F982869F84900C13F80 /* codes.rambo.experiment.TextTransformer.extension.appextensionpoint in Resources */,
-				F4228F7D2869EE2500C13F80 /* Preview Assets.xcassets in Resources */,
-				F4228F7A2869EE2500C13F80 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,8 +352,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4228FAB2869FAE300C13F80 /* Preview Assets.xcassets in Resources */,
-				F4228FA82869FAE300C13F80 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,11 +376,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4228F782869EE2500C13F80 /* ContentView.swift in Sources */,
-				F4228FD9286A1B2F00C13F80 /* TextTransformerExtensionXPCClient.swift in Sources */,
-				F45A2625286A3C09004B61C9 /* TextTransformExtensionHost+UI.swift in Sources */,
-				F4228FD4286A1AB400C13F80 /* TextTransformExtensionHost.swift in Sources */,
-				F4228F762869EE2500C13F80 /* TextTransformerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,8 +383,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4228FA62869FAE200C13F80 /* ContentView.swift in Sources */,
-				F4228FA42869FAE200C13F80 /* ExtensionProviderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +390,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4228FB72869FB0000C13F80 /* Uppercase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,7 +397,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F47EE33D286A2FE000132067 /* Shuffle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,9 +449,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -566,6 +474,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -604,9 +513,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8C7439RJLG;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -619,6 +531,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
@@ -627,15 +540,14 @@
 		F4228F822869EE2500C13F80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TextTransformer/TextTransformer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"TextTransformer/Preview Content\"";
-				DEVELOPMENT_TEAM = 8C7439RJLG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -644,6 +556,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = codes.rambo.experiment.TextTransformer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -655,15 +568,14 @@
 		F4228F832869EE2500C13F80 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TextTransformer/TextTransformer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"TextTransformer/Preview Content\"";
-				DEVELOPMENT_TEAM = 8C7439RJLG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -672,6 +584,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = codes.rambo.experiment.TextTransformer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -683,15 +596,14 @@
 		F4228FAE2869FAE300C13F80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ExtensionProvider/ExtensionProvider.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ExtensionProvider/Preview Content\"";
-				DEVELOPMENT_TEAM = 8C7439RJLG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -700,6 +612,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = codes.rambo.experiment.ExtensionProvider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -711,15 +624,14 @@
 		F4228FAF2869FAE300C13F80 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ExtensionProvider/ExtensionProvider.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ExtensionProvider/Preview Content\"";
-				DEVELOPMENT_TEAM = 8C7439RJLG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -728,6 +640,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = codes.rambo.experiment.ExtensionProvider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -742,7 +655,7 @@
 				CODE_SIGN_ENTITLEMENTS = Uppercase/Uppercase.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DEAD_CODE_STRIPPING = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Uppercase/Info.plist;
@@ -753,7 +666,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = codes.rambo.experiment.ExtensionProvider.Uppercase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -769,7 +682,7 @@
 				CODE_SIGN_ENTITLEMENTS = Uppercase/Uppercase.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DEAD_CODE_STRIPPING = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Uppercase/Info.plist;
@@ -780,7 +693,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = codes.rambo.experiment.ExtensionProvider.Uppercase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -796,7 +709,7 @@
 				CODE_SIGN_ENTITLEMENTS = Shuffle/Shuffle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DEAD_CODE_STRIPPING = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Shuffle/Info.plist;
@@ -807,7 +720,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = codes.rambo.experiment.ExtensionProvider.Shuffle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -823,7 +736,7 @@
 				CODE_SIGN_ENTITLEMENTS = Shuffle/Shuffle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DEAD_CODE_STRIPPING = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Shuffle/Info.plist;
@@ -834,7 +747,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = codes.rambo.experiment.ExtensionProvider.Shuffle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
