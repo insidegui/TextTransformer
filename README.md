@@ -2,7 +2,7 @@
 
 This year's WWDC introduced many new APIs, two of which caught my attention: ExtensionFoundation and ExtensionKit.
 
-![Screenshot of the TextTransformer sample app](./Images/Hero.png)
+![Screenshot of the TextTransformer sample app](./Images/Hero.webp)
 
 _Huge thanks to [@mattmassicotte](https://github.com/mattmassicotte) for the help_
 
@@ -56,7 +56,7 @@ The `ExtensionProvider` target itself doesn't do much, it only serves as a paren
 
 To create a target for a custom extension point, you can pick the "Generic Extension" template from Xcode's new target dialog.
 
-![Generic Extension target template screenshot](./Images/GenericExtension.png)
+![Generic Extension target template screenshot](./Images/GenericExtension.webp)
 
 The `Uppercase` target declares support for the custom extension point in its Info.plist by setting the corresponding identifier for the `EXAppExtensionAttributes.EXExtensionPointIdentifier` property:
 
@@ -114,7 +114,7 @@ That's because every new extension for your extension point is disabled by defau
 
 In order to present the user with a UI that will let them enable/disable extensions for your app's custom extension point, you can use [EXAppExtensionBrowserViewController](https://developer.apple.com/documentation/extensionkit/exappextensionbrowserviewcontroller), which this sample app presents on first launch if it detects that no extensions are enabled, or when the user clicks the "Manage Extensions" button.
 
-![UI to manage extensions for TextTransformer](Images/ManageExtensions.png)
+![UI to manage extensions for TextTransformer](Images/ManageExtensions.webp)
 
 After extensions are enabled, they will then be returned in the async sequence you can subscribe to with [AppExtensionIdentity.matching](https://developer.apple.com/documentation/extensionfoundation/appextensionidentity/4043633-matching).
 
@@ -223,7 +223,7 @@ For this example, I decided to use the UI extension point to give extensions the
 
 I've included another sample extension in the `ExtensionProvider` app called `Shuffle`, which shuffles the input string, randomizing it. This `Shuffle` extension offers an option to also uppercase the shuffled string, and this option can be toggled in a configuration UI provided by the extension:
 
-![Popover for configuring the Shuffle extension](./Images/UIExtension.png)
+![Popover for configuring the Shuffle extension](./Images/UIExtension.webp)
 
 The thing to keep in mind here is that the toggle you're seeing in that popover is not being created in the TextTransformer app, what you're seeing is a "portal" into the `Shuffle` app extension itself, which is creating that view and controlling what happens to it, as well as responding to its events.
 
